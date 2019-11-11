@@ -1,0 +1,19 @@
+<!-- Display a new random grid and a form -->
+<%= link_to "New Letters", "/new" %>
+
+<p><%= "New Game" %></p>
+<p><%= @letters %></p>
+
+
+<form action="/score" method="POST">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+   <%= hidden_field_tag :letters, @letters %>
+  <input type="text" name="word" placeholder="word">
+  <input type="submit">
+</form>
+
+
+
+
+
+
